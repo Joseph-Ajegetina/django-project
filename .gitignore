@@ -76,5 +76,4 @@ docker-compose.override.yml
 *.orig
 *.bak
 *.swp
-Procfile*
 runtime.txt
