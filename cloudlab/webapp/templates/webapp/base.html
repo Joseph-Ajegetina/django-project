@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Lab Django App</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        .container { max-width: 800px; margin: 0 auto; }
+        .task { border: 1px solid #ddd; margin: 10px 0; padding: 10px; }
+        .btn { background: #007cba; color: white; padding: 10px 20px; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cloud Lab Task Manager</h1>
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>
