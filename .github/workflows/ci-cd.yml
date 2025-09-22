@@ -190,13 +190,13 @@ jobs:
     
     - name: Build and push to ACR
       run: |
-        az acr build --registry cloudlabacr --image ${{ env.DOCKER_IMAGE }}:${{ github.sha }} .
+        az acr build --registry cloudlabacr6 --image ${{ env.DOCKER_IMAGE }}:${{ github.sha }} .
     
     - name: Deploy to Azure Container Instances
       run: |
         az container create \
           --resource-group cloudlab-rg \
           --name cloudlab-django-${{ github.sha }} \
-          --image cloudlabacr.azurecr.io/${{ env.DOCKER_IMAGE }}:${{ github.sha }} \
+          --image cloudlabacr6.azurecr.io/${{ env.DOCKER_IMAGE }}:${{ github.sha }} \
           --dns-name-label cloudlab-django-${{ github.run_number }} \
           --ports 8000
