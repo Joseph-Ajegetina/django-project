@@ -67,6 +67,12 @@ kind: Service
 metadata:
   name: django-service
   namespace: cloudlab
+  labels:
+    app: django-app
+  annotations:
+    prometheus.io/scrape: "true"
+    prometheus.io/port: "8000"
+    prometheus.io/path: "/metrics"
 spec:
   selector:
     app: django-app
