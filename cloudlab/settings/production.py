@@ -4,7 +4,12 @@ import os
 
 DEBUG = False
 
-ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
+ALLOWED_HOSTS = [    
+    "18.132.213.255",# your EC2 public IP
+    "your-domain.com",
+    "localhost",# optional for local dev
+    "127.0.0.1",]
+
 
 # Default to SQLite if DATABASE_URL not provided
 DATABASES = {
