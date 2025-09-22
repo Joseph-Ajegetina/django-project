@@ -41,17 +41,25 @@ spec:
               name: cloudlab-secrets
               key: DATABASE_URL
 
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "250m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+
         livenessProbe:
           httpGet:
             path: /
             port: 8000
-          initialDelaySeconds: 30
+          initialDelaySeconds: 60
           periodSeconds: 10
         readinessProbe:
           httpGet:
             path: /
             port: 8000
-          initialDelaySeconds: 5
+          initialDelaySeconds: 30
           periodSeconds: 5
 ---
 apiVersion: v1
