@@ -4,7 +4,7 @@ import os
 
 DEBUG = False
 
-ALLOWED_HOSTS = ["yourdomain.com"]
+ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
 
 # Default to SQLite if DATABASE_URL not provided
 DATABASES = {
